@@ -1,0 +1,8 @@
+{
+  "html.format.wrapAttributes": "force-aligned",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "file",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true, // filter: !**/node_modules/**
+}
