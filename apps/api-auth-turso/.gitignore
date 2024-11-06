@@ -1,0 +1,9 @@
+# deps
+node_modules/
+
+# misc
+.DS_Store
+dev-sqlite
+auth_token
+.pem
+jwtgen/generated

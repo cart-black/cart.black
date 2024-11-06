@@ -1,15 +1,21 @@
 {
-  "name": "api-auth-hono",
-  "type": "module",
-  "scripts": {
-    "dev": "tsx watch src/index.ts"
-  },
-  "dependencies": {
-    "@hono/node-server": "^1.13.5",
-    "hono": "^4.6.9"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
-  }
+	"name": "api-auth-hono",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"db:reset": "./scripts/reset.sh",
+		"db:generate": "./scripts/generate.sh",
+		"db:migrate": "./scripts/migrate.sh",
+		"wait-turso-port": "wait-on tcp:8022"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.13.5",
+		"@libsql/client": "^0.14.0",
+		"drizzle-orm": "^0.36.0",
+		"hono": "^4.6.9"
+	},
+	"devDependencies": {
+		"drizzle-kit": "^0.27.2",
+		"tsx": "^4.19.2"
+	}
 }

@@ -1,0 +1,12 @@
+{
+	"name": "api-auth-turso",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "mkdir -p dev-sqlite && turso dev --port 8022 --db-file ./dev-sqlite/local-turso.db",
+		"db:reset": "rm -rf dev-sqlite"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
