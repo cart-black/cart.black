@@ -4,6 +4,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "dotenv -e ../../.env -- bash -c 'astro dev'",
+		"db:reset": "rm -rf sqlite.db && sqlite3 sqlite.db < setup.sql",
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
