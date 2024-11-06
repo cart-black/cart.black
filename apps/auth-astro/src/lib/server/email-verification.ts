@@ -59,7 +59,8 @@ export function setEmailVerificationRequestCookie(context: APIContext, request: 
 		httpOnly: true,
 		path: "/",
 		secure: import.meta.env.PROD,
-		sameSite: "lax",
+		// WARNING: use sameSite:strict unless it is redirect from oauth provider
+		sameSite: "strict",
 		expires: request.expiresAt
 	});
 }
@@ -69,7 +70,8 @@ export function deleteEmailVerificationRequestCookie(context: APIContext): void 
 		httpOnly: true,
 		path: "/",
 		secure: import.meta.env.PROD,
-		sameSite: "lax",
+		// WARNING: use sameSite:strict unless it is redirect from oauth provider
+		sameSite: "strict",
 		maxAge: 0
 	});
 }

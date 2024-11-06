@@ -98,7 +98,8 @@ export function validatePasswordResetSessionRequest(context: APIContext): Passwo
 export function setPasswordResetSessionTokenCookie(context: APIContext, token: string, expiresAt: Date): void {
 	context.cookies.set("password_reset_session", token, {
 		expires: expiresAt,
-		sameSite: "lax",
+		// WARNING: use sameSite:strict unless it is redirect from oauth provider
+		sameSite: "strict",
 		httpOnly: true,
 		path: "/",
 		secure: !import.meta.env.DEV
@@ -108,7 +109,8 @@ export function setPasswordResetSessionTokenCookie(context: APIContext, token: s
 export function deletePasswordResetSessionTokenCookie(context: APIContext): void {
 	context.cookies.set("password_reset_session", "", {
 		maxAge: 0,
-		sameSite: "lax",
+		// WARNING: use sameSite:strict unless it is redirect from oauth provider
+		sameSite: "strict",
 		httpOnly: true,
 		path: "/",
 		secure: !import.meta.env.DEV

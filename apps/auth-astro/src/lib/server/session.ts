@@ -68,7 +68,8 @@ export function setSessionTokenCookie(context: APIContext, token: string, expire
 		httpOnly: true,
 		path: "/",
 		secure: import.meta.env.PROD,
-		sameSite: "lax",
+		// WARNING: use sameSite:strict unless it is redirect from oauth provider
+		sameSite: "strict",
 		expires: expiresAt
 	});
 }
@@ -78,7 +79,8 @@ export function deleteSessionTokenCookie(context: APIContext): void {
 		httpOnly: true,
 		path: "/",
 		secure: import.meta.env.PROD,
-		sameSite: "lax",
+		// WARNING: use sameSite:strict unless it is redirect from oauth provider
+		sameSite: "strict",
 		maxAge: 0
 	});
 }
