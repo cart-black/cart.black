@@ -21,7 +21,7 @@ Emails are just logged to the console. Rate limiting is implemented using JavaSc
 Create `sqlite.db` and run `setup.sql`.
 
 ```
-sqlite3 sqlite.db
+sqlite3 sqlite.db < setup.sql
 ```
 
 Create a .env file. Generate a 128 bit (16 byte) string, base64 encode it, and set it as `ENCRYPTION_KEY`.
