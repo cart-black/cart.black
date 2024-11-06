@@ -2,7 +2,7 @@
 	"name": "api-auth-hono",
 	"type": "module",
 	"scripts": {
-		"dev": "tsx watch src/index.ts",
+		"dev": "dotenv -e ../../.env -- bash -c 'tsx watch src/index.ts'",
 		"db:reset": "./scripts/reset.sh",
 		"db:generate": "./scripts/generate.sh",
 		"db:migrate": "./scripts/migrate.sh",
@@ -12,7 +12,11 @@
 		"@hono/node-server": "^1.13.5",
 		"@libsql/client": "^0.14.0",
 		"drizzle-orm": "^0.36.0",
-		"hono": "^4.6.9"
+		"hono": "^4.6.9",
+		"@node-rs/argon2": "^1.8.3",
+		"@oslojs/crypto": "^0.6.2",
+		"@oslojs/encoding": "1.1.0",
+		"@oslojs/binary": "^0.3.0"
 	},
 	"devDependencies": {
 		"drizzle-kit": "^0.27.2",
