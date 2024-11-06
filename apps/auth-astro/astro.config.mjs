@@ -10,5 +10,8 @@ export default defineConfig({
 	}),
 	security: {
 		checkOrigin: true // TODO: I may need a custom function to check the origin for proxied requests
+	},
+	vite: {
+		envDir: "../../",
 	}
 });
