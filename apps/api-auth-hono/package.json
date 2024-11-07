@@ -11,15 +11,17 @@
 	"dependencies": {
 		"@hono/node-server": "^1.13.5",
 		"@libsql/client": "^0.14.0",
-		"drizzle-orm": "^0.36.0",
-		"hono": "^4.6.9",
 		"@node-rs/argon2": "^1.8.3",
+		"@oslojs/binary": "^0.3.0",
 		"@oslojs/crypto": "^0.6.2",
 		"@oslojs/encoding": "1.1.0",
-		"@oslojs/binary": "^0.3.0"
+		"drizzle-orm": "^0.36.0",
+		"hono": "^4.6.9"
 	},
 	"devDependencies": {
+		"@hono/zod-validator": "^0.4.1",
 		"drizzle-kit": "^0.27.2",
-		"tsx": "^4.19.2"
+		"tsx": "^4.19.2",
+		"zod": "^3.23.8"
 	}
 }
